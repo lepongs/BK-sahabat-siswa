@@ -1,113 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- Boxicons -->
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<!-- My CSS -->
-	<link rel="stylesheet" href="index.css">
+    <!-- Meta tags and CSS links -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
     <title>Dashboard-siswa</title>
-	
 </head>
 <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <!-- Branding section (you can add a logo or site name here) -->
+        <a href="#" class="brand">
+            <!-- Add your logo or site name here -->
+        </a>
+        <!-- Navigation menu -->
+        <ul class="side-menu top">
+            <!-- Home menu item -->
+            <li class="active">
+                <a href="#">
+                    
+                    <span class="text">HOME</span>
+                </a>
+            </li>
+            <!-- Kontak menu item -->
+            <li>
+                <a href="#">
+                  
+                    <span class="text">KONTAK</span>
+                </a>
+            </li>
+            <!-- Tes menu item -->
+            <li>
+                <a href="#">
+                    
+                    <span class="text">TES</span>
+                </a>
+            </li>
+            <!-- Akun user menu item -->
+            <li>
+                <a href="#">
+                   
+                    <span class="text">Akun user</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
 
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <!-- Site title or slogan -->
+            <div class="sahabat"> BK-SAHABATSISWA</div>
+        </nav>
+        <!-- NAVBAR -->
 
-	<!-- SIDEBAR -->
-	<section id="sidebar">
-		<a href="#" class="brand">
-			
-		</a>
-		<ul class="side-menu top">
-			<li class="active">
-				<a href="#">
-					<i class='bx bxs-dashboard' ></i>
-					<span class="text">HOME</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">KONTAK</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-doughnut-chart' ></i>
-					<span class="text">TES</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<i class='bx bxs-message-dots' ></i>
-					<span class="text">Akun user</span>
-				</a>
-			</li>
-			
-		</ul>
-	</section>
-	<!-- SIDEBAR -->
-
-
-
-	<!-- CONTENT -->
-	<section id="content">
-		<!-- NAVBAR -->
-		<nav>
-			<div class="sahabat"> BK-SAHABATSISWA</div>
-			
-			
-		</nav>
-		<!-- NAVBAR -->
-
-		<!-- MAIN -->
-		<main>
+        <!-- MAIN CONTENT AREA -->
+        <main>
+            <!-- Left section with heading "Dashboard" -->
             <div class="left">
                 <h1>Dashboard</h1>
             </div>
 
-<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h2>Ikuti tes gaya belajar </h2>
-					</div>
-                    
-                    <table>
-						<tbody>
-							<tr>
-								<td><button class="status completed">Mulai Tes</button></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-
-
+            <!-- Table data section -->
+            <div class="table-data">
+                <!-- First order section for "Ikuti tes gaya belajar" -->
                 <div class="order">
-					<div class="head">
-						<h2>Mau Konsultasi? <br>
-                            Hubungi Guru BK-mu</h2>
-					</div>
-                    
+                    <div class="head">
+                        <h2>Ikuti tes gaya belajar </h2>
+                    </div>
+                    <!-- Button to start the test -->
                     <table>
-						<tbody>
-							<tr>
-								<td><button class="status completed">Mulai Tes</button></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+                        <tbody>
+                            <tr>
+                                <td><button class="status completed">Mulai Tes</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
+                <!-- Second order section for "Mau Konsultasi?" -->
+                <div class="order">
+                    <div class="head">
+                        <h2>Mau Konsultasi? <br> Hubungi Guru BK-mu</h2>
+                    </div>
+                    <!-- Button to start consultation -->
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><button class="status completed">Mulai Tes</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <!-- MAIN CONTENT AREA -->
+    </section>
+    <!-- CONTENT -->
 
-
-			</div>
-		</main>
-		<!-- MAIN -->
-	</section>
-	<!-- CONTENT -->
-	
-
-	<script src="script.js"></script>
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
