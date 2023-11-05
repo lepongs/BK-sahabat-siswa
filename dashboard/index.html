@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <title>Dashboard-siswa</title>
 </head>
 <body>
@@ -13,10 +14,11 @@
     <section id="sidebar">
         <!-- Branding section (you can add a logo or site name here) -->
         <a href="#" class="brand">
-            <!-- Add your logo or site name here -->
-        </a>
+         BK-SAHABATSISWA<!-- Add your logo or site name here -->
+        </a> 
+        <hr>
         <!-- Navigation menu -->
-        <ul class="side-menu top">
+        <ul class="side-menu top"> 
             <!-- Home menu item -->
             <li class="active">
                 <a href="#">
@@ -32,19 +34,20 @@
                 </a>
             </li>
             <!-- Tes menu item -->
-            <li>
-                <a href="#">
-                    
-                    <span class="text">TES</span>
-                </a>
-            </li>
+           
             <!-- Akun user menu item -->
             <li>
-                <a href="#">
-                   
-                    <span class="text">Akun user</span>
-                </a>
+                <div class="dropdown">
+                    
+                    <button onclick="myFunction()" class="dropbtn">TES <i class="fa fa-caret-down"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="#home">TES GAYA BELAJAR</a>
+                    </div>
+                  </div>
+                  
+                 
             </li>
+            
         </ul>
     </section>
     <!-- SIDEBAR -->
@@ -53,8 +56,16 @@
     <section id="content">
         <!-- NAVBAR -->
         <nav>
-            <!-- Site title or slogan -->
-            <div class="sahabat"> BK-SAHABATSISWA</div>
+            <div class="dropdown">
+                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <i class="fa fa-user"></i> User
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="profile.php">Profile</a></li>
+                  <li><a href="settings.php">Settings</a></li>
+                  <li><a href="logout.php">Logout</a></li>
+                </ul>
+              </div>
         </nav>
         <!-- NAVBAR -->
 
@@ -103,6 +114,6 @@
     <!-- CONTENT -->
 
     <!-- JavaScript file -->
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
