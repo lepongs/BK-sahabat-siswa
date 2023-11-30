@@ -1,0 +1,378 @@
+/* Mengimpor font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset tata letak bawaan dan mengatur box-sizing untuk semua elemen */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+/* Mengatur font utama untuk body dan warna latar belakang */
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #eee;
+}
+
+/* Mode gelap: mengubah warna latar belakang ketika mode gelap aktif */
+body.dark {
+	background: #0C0C1E;
+}
+
+/* Menghilangkan garis bawah dari tautan */
+a {
+	text-decoration: none;
+}
+
+/* Menghilangkan poin daftar dari daftar tak bernomor */
+ul {
+	list-style: none;
+}
+
+table {
+    width: 75%; /* Atur lebar tabel sesuai kebutuhan Anda */
+    margin: 0 auto; /* Ini akan membuat tabel berada di tengah halaman */
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: var(--poppins);
+  
+  }
+  
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Mengurangkan lebar kolom Gambar */
+  td:first-child {
+    text-align: center;
+    width: 20%; /* Sesuaikan lebar sesuai kebutuhan Anda */
+  }
+  
+  th:first-child {
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+/* SIDEBAR */
+#sidebar {
+	/* Sidebar akan tetap berada di atas konten dan bertransisi dengan durasi 0.3 detik */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 280px;
+	height: 100%;
+	background: #F9F9F9;
+	z-index: 1; /* Memberi z-index agar tampil di depan konten utama */
+	font-family: 'Lato', sans-serif;
+	transition: .3s ease;
+	overflow-x: hidden;
+}
+
+/* Menyembunyikan sidebar dengan mengurangi lebar menjadi 60px */
+#sidebar.hide {
+	width: 60px;
+}
+
+/* Merek di sidebar */
+#sidebar .brand {
+	font-size: 24px;
+	font-weight: 700;
+	height: 56px;
+	margin: 6%;
+	display: flex;
+	align-items: center;
+	color: #3C91E6;
+	position: sticky;
+	background: #F9F9F9;
+	z-index: 500; /* Diberi z-index lebih tinggi agar muncul di depan elemen lainnya */
+	padding-bottom: 5%;
+	box-sizing: content-box;
+	text-align: center;
+	
+}
+
+/* Menu-item di sidebar */
+#sidebar .side-menu li {
+	height: 50px;
+	padding: 4px;
+	margin-left:30%;
+}
+
+button.statuscompleted {
+	margin: 20% 40%;
+	padding: 15%;
+	background-color: #3C91E6;
+	font-family: 'Lato', sans-serif;
+	font-size: 2 em;
+	border-radius: 10px;
+	color: #f1f1f1;
+	border-color: dimgray;
+	text-align: center;
+	cursor: pointer;
+}
+
+.dropbtn {
+	padding: 6px;
+	font-size: 16px;
+	border: none;
+	background-color: #F9F9F9;
+;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	color: #3C91E6;
+	background: #F9F9F9;
+	z-index: 500;
+	padding-bottom: 20px;
+	
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: -7px;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: transparent; /* Mengatur latar belakang menjadi transparan */
+    overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	
+	
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+
+
+}
+
+
+  
+  .show {display: block;}
+
+
+  /* menu di navbar*/
+  .dropdown {
+	position: relative;
+	display: inline-block;
+	
+  }
+  
+  .dropdown-toggle {
+	cursor: pointer;
+  }
+  
+  .dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-menu a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-menu a:hover {
+	background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+	display: block;
+  }
+  
+  
+  
+
+/* Efek visual saat menu-item aktif dipilih */
+#sidebar .side-menu li.active::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	top: -40px;
+	right: 0;
+	box-shadow: 20px 20px 0 #eee;
+	z-index: -1; /* Diberi z-index lebih rendah agar muncul di belakang menu-item lainnya */
+}
+
+/* Tata letak dan tampilan menu-item di sidebar */
+#sidebar .side-menu li a {
+	width: 100%;
+	height: 100%;
+	background: #F9F9F9;
+	display: flex;
+	align-items: center;
+	border-radius: 48px;
+	font-size: 16px;
+	color: #342E37;
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+
+/* Warna tautan aktif di menu-item */
+#sidebar .side-menu.top li.active a {
+	color: #3C91E6;
+}
+
+
+
+/* Warna tautan saat mouse berada di atasnya */
+#sidebar .side-menu.top li a:hover {
+	color: #3C91E6;
+}
+/* SIDEBAR */
+
+/* KONTEN UTAMA */
+#content {
+	/* Konten utama bergeser ke kanan sejauh lebar sidebar saat sidebar muncul atau disembunyikan */
+	
+		position: relative;
+		width: calc(100% - 280px);
+		left: 280px;
+		max-height: calc(100vh - 56px); /* Menyesuaikan tinggi konten dengan tinggi layar - tinggi navigasi */
+		overflow-y: auto;
+		transition: .3s ease;
+	  }
+	  
+
+
+/* Navigasi di bagian atas konten */
+#content nav {
+	height: 56px;
+	background: #F9F9F9;
+	padding: 0 24px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1000; /* Menyertakan z-index agar muncul di atas konten lainnya */
+}
+/* KONTEN UTAMA */
+
+/* BAGIAN UTAMA */
+#content main {
+	width: 100%;
+	padding: 36px 24px;
+	max-height: calc(100vh - 56px);
+	overflow-y: auto;
+}
+
+/* Tata letak untuk elemen-elemen data dalam tabel */
+.table-data {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 24px;
+	margin-top: 70px;
+	width: 100%;
+	color: #342E37;
+}
+
+/* Tata letak dan tampilan elemen data individu */
+.table-data > div {
+	border-radius: 20px;
+	background: #F9F9F9;
+	padding: 24px;
+	overflow-x: auto;
+	flex-grow: 1;
+	flex-basis: 300px;
+}
+/* BAGIAN UTAMA */
+
+@media screen and (max-width: 576px) {
+	#content nav form .form-input input {
+		display: none;
+	}
+
+	#content nav form .form-input button {
+		width: auto;
+		height: auto;
+		background: transparent;
+		border-radius: none;
+		color: var(--dark);
+	}
+
+	#content nav form.show .form-input input {
+		display: block;
+		width: 100%;
+	}
+	#content nav form.show .form-input button {
+		width: 36px;
+		height: 100%;
+		border-radius: 0 36px 36px 0;
+		color: var(--light);
+		background: var(--red);
+	}
+
+	#content nav form.show ~ .notification,
+	#content nav form.show ~ .profile {
+		display: none;
+	}
+	#content main .box-info {
+		grid-template-columns: 1fr;
+	}
+
+	#content main .table-data .head {
+		min-width: 420px;
+	}
+	#content main .table-data .order table {
+		min-width: 420px;
+	}
+	#content main .table-data .todo .todo-list {
+		min-width: 420px;
+	}
+
+}
+
+@media screen and (max-width: 476px) {
+	#sidebar {
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+	}
+
+	#content nav {
+		height: 56px;
+		display: flex;
+		align-items: center;
+		grid-gap: 0;
+	}
+}

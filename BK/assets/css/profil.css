@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #eee;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0 0 15px 0;
+}
+
+@media screen and (max-width: 425px) {
+	#box-container > .paragraph-container {
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#sidebar {
+		display: none;
+	}
+
+	#box-container {
+		height: 60vh;
+	}
+
+	#box-container > img{
+		height: 30%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#content {
+		position: relative;
+		width: calc(100% - 250px);
+		left: 250px;
+		max-height: 100vh;
+		overflow-y: auto;
+	}
+}
+
+/* sidebar section */
+#sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	background: #F9F9F9;
+	z-index: 1;
+	font-family: 'Lato', sans-serif;
+	transition: .3s ease;
+	overflow-x: hidden;
+}
+
+/* Merek di sidebar */
+#sidebar .brand {
+	font-size: 24px;
+	font-weight: 700;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #3C91E6;
+}
+
+/* Menu-item di sidebar */
+#sidebar .side-menu {
+	height: 30%;
+	display: flex;
+	flex-direction: column;
+	padding: 7px 20px;
+	row-gap: 20%;
+	justify-content: center;
+}
+
+.side-menu > a, button {
+	color: black;
+	transition: color 0.3s;
+}
+
+.side-menu > a > span, i {
+	padding: 0 5px;
+}
+
+/* jika sebuah kursor menghover ke element berikut, maka text akan berubah */
+.side-menu > a:hover, a:focus {
+	color: #3C91E6;
+	background: #F9F9F9;
+}
+
+.dropbtn {
+	font-size: 15px;
+	border: none;
+	background-color: #F9F9F9;
+}
+
+/* jika sebuah kursor menghover ke element berikut, maka text akan berubah */
+.dropbtn:hover {
+	color: #3C91E6;
+	background: #F9F9F9;
+	z-index: 2;
+}
+
+.side-menu > .dropdown {
+	position: relative;
+	display: inline-block;
+	margin-left: -5px;
+}
+
+/* dropdown tes di sidebar */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #F9F9F9; /* Mengatur latar belakang menjadi transparan */
+    overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 3;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	display: block;
+}
+  
+.show {
+	display: block;
+}
+
+/* dropdown user di navbar*/
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+  
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+  
+.dropdown-menu a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-menu a:hover {
+	background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+/* Warna tautan aktif di menu-item */
+#sidebar .side-menu.top li.active a {
+	color: #3C91E6;
+}
+
+/* Warna tautan saat mouse berada di atasnya */
+#sidebar .side-menu.top a:hover {
+	color: #3C91E6;
+}
+/* sidebar section */
+
+
+/* main content section */
+#content {
+	transition: .3s ease;
+}
+
+/* Navigasi di bagian atas konten */
+#content nav {
+	height: 56px;
+	background: #F9F9F9;
+	padding: 0 24px;
+	display: flex;
+	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	justify-content: space-between;
+}
+/* main content section */
+
+/* styles for main content */
+#content main {
+	padding: 24px 35px;
+	overflow-y: auto;
+}
+
+/* container untuk profile */
+.box-container {
+	background-color: snow;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	grid-gap: 70px;
+	height: calc(100vh - 220px);
+}
+
+.box-container > img{
+	height: 80px;
+}
+
+.paragraph-container {
+	width: 43%;
+}
+
+.paragraph-container > p {
+	margin: 0;
+}
+
+/* styles for main content */
